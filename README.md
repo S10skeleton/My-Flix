@@ -14,6 +14,7 @@ location with an internet connection.
 - **Movie Information:** View detailed information about movies.
 - **Admin Control:** Only the main ADMIN user has the authority to add additional members.
 - **Cross-Platform Compatibility:** Accessible from various devices.
+- **Donation Payment System:** A way for fans to donate to my various projects.
 
 ## Technologies Used
 
