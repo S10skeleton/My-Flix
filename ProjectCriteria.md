@@ -1,92 +1,156 @@
-# DU-VIRT-FSF-PT-10-2023-U-LOLC
+# 23 Final Project: MERN Stack Single-Page Application
 
+Projects have played a key role in your journey to becoming a full-stack web developer. As you apply for development jobs, your portfolio is absolutely vital to opening doors to opportunities. Your portfolio showcases high-quality deployed examples of your work, and you can use your finished projects for that very purpose.
 
+This project is a fantastic opportunity to show employers your collaborative skills and coding abilities, especially in the context of a scalable, user-focused MERN app. Remember that employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job.
 
-## Getting started
+## Project Requirements
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+Your group will use everything you’ve learned throughout this course to create a MERN stack single-page application that works with real-world data to solve a real-world challenge, with a focus on data and user demand. This project will provide you with the best opportunity to demonstrate your problem-solving skills, which employers will want to see during interviews. Once again, the user story and acceptance criteria will depend on the project that you create, but your project must fulfill the following requirements:
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+* Use React for the front end.
 
-## Add your files
+* Use GraphQL with a Node.js and Express.js server.
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+* Use MongoDB and the Mongoose ODM for the database.
 
-```
-cd existing_repo
-git remote add origin https://git.bootcampcontent.com/University-of-Denver/DU-VIRT-FSF-PT-10-2023-U-LOLC.git
-git branch -M main
-git push -uf origin main
-```
+* Use queries and mutations for retrieving, adding, updating, and deleting data.
 
-## Integrate with your tools
+* Be deployed using Render (with data).
 
-- [ ] [Set up project integrations](https://git.bootcampcontent.com/University-of-Denver/DU-VIRT-FSF-PT-10-2023-U-LOLC/-/settings/integrations)
+* Have a polished UI.
 
-## Collaborate with your team
+* Be responsive.
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+* Be interactive (i.e., accept and respond to user input).
 
-## Test and Deploy
+* Include authentication (JWT).
 
-Use the built-in continuous integration in GitLab.
+* Protect sensitive API key information on the server.
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+* Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, high-quality comments, etc.).
 
-***
+* Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
-# Editing this README
+### CSS Styling
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+Instead of using a CSS library like Bootstrap, consider one of the following suggestions:
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+* Look into the concept of CSS-in-JS, which abstracts CSS to the component level, using JavaScript to describe styles in a declarative and maintainable way. Some popular libraries include [styled-components](https://styled-components.com/) and [Emotion](https://emotion.sh/docs/introduction).
 
-## Name
-Choose a self-explaining name for your project.
+* Try using a component library, such as [Semantic UI](https://semantic-ui.com/), [Chakra UI](https://chakra-ui.com/), or [Ant Design](https://ant.design/).
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+* Create all the CSS for your application just using CSS.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+Ultimately, it doesn't matter which of these options you choose&mdash;it just needs to look professional and be mobile-friendly.
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+### Payment Platform
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+Consider integrating the Stripe payment platform. Even if you don’t create an e-commerce application, you could set up your site to accept charitable donations.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+### Bonus
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+Although this is not a requirement for your project, see if you can also implement functionality to meet the minimum requirements of a PWA:
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+* Uses a web manifest
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+* Uses a service worker for offline functionality
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+* Is installable
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+## Presentation Requirements
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following:
 
-## License
-For open source projects, say how it is licensed.
+* Elevator pitch: a one minute description of your application
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+* Concept: What is your user story? What was your motivation for development?
+
+* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
+
+* Demo: Show your stuff!
+
+* Directions for Future Development
+
+* Links to the deployed application and the GitHub repository. Use the [Deploy MERN Stack with Render and MongoDB Atlas guide](https://coding-boot-camp.github.io/full-stack/render/deploy-mern-stack-with-render-guide) on The Full-Stack Blog if you need a reminder on how to deploy to Render.
+
+## Grading Requirements
+
+This project is graded based on the following criteria:
+
+### Technical Acceptance Criteria: 25%
+
+* Satisfies the following code requirements:
+
+  * Application uses React for the front end.
+
+  * Application has a GraphQL API with a Node.js and Express.js server, and uses queries and mutations for retrieving, adding, updating, and deleting data.
+
+  * Application uses MongoDB and the Mongoose ODM for the database and protects sensitive API key information on the server.
+
+  * Application includes user authentication using JWT.
+
+### Concept 10%
+
+* Application should be a unique and novel idea.
+
+* Your group should clearly and concisely articulate your project idea.
+
+### Deployment: 20%
+
+* Application deployed at live URL on Render and loads with no errors.
+
+* Application GitHub URL submitted.
+
+### Repository Quality: 10%
+
+* Repository has a unique name.
+
+* Repository follows best practices for file structure and naming conventions.
+
+* Repository follows best practices for class and id naming conventions, indentation, quality comments, etc.
+
+* Repository contains multiple descriptive commit messages.
+
+* Repository contains a high-quality README file with description, screenshot, and link to deployed application.
+
+### Application Quality: 15%
+
+* Application user experience is intuitive and easy to navigate.
+
+* Application user interface style is clean and polished.
+
+* Application is responsive.
+
+### Presentation 10%
+
+* Your group should present using a slide deck.
+
+* Every group member should speak during the presentation.
+
+* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
+
+### Collaboration 10%
+
+* There are no major disparities in the number of GitHub contributions between group members.
+
+### Bonus
+
+Fulfilling all three of the following requirements to turn your app into a PWA will add 10 points to your grade. Note that the highest grade you can achieve is still a 100:
+
+* Uses a web manifest
+
+* Uses a service worker for offline functionality
+
+* Is installable
+
+## How to Submit Your MERN Stack Single-Page Application
+
+**Each member of your group** is required to submit the following for review:
+
+* The URL of the deployed application.
+
+* The URL of the GitHub repository, with a unique name and a README describing the project.
+
+---
+© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

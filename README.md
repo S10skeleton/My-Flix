@@ -25,6 +25,15 @@ location with an internet connection.
 - **API Handling:** GraphQL for data retrieval and manipulation
 - **Deployment:** Render
 
+## Bonus I will try to implement
+Although this is not a requirement for your project, see if you can also implement functionality to meet the minimum requirements of a PWA:
+
+- Uses a web manifest
+
+- Uses a service worker for offline functionality
+
+- Is installable
+
 ## Getting Started
 
 ### Prerequisites
