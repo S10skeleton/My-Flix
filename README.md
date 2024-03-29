@@ -4,6 +4,9 @@ MyFlix is a personal video streaming application, developed as a full-stack proj
 and portfolio purposes. It allows users to stream movies from a home server, accessible from any <br> 
 location with an internet connection.
 
+![MyFlix](./Development/client/src/assets/MyFlix-Concept.png)
+
+
 ## Features
 
 - **User Authentication:** Secure login system for users.
@@ -69,4 +72,4 @@ Project Link: https://github.com/s10skeleton/myflix-shanes-p3
 
 ---
 
-© 2024 Your Name. All Rights Reserved.
+© 2024 Shane Beaman. All Rights Reserved.
