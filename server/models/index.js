@@ -1,22 +1,18 @@
-const mongoose = require('mongoose');
+// Import the mongoose connection from connection.js
+const db = require('../config/connection');
 
 // Import models
 const Movie = require('./movies');
 const User = require('./users');
 
-// Connect to MongoDB
-mongoose.connect('your-mongodb-connection-string', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+// Optional: Listen for the connected event from the centralized connection logic
+// and log it for debugging purposes
+db.once('connected', () => {
+    console.log('Connected to MongoDB via connection.js');
 });
 
-// Check for a successful connection
-mongoose.connection.on('connected', () => {
-    console.log('Connected to MongoDB');
-});
-
-// Handle connection errors
-mongoose.connection.on('error', (err) => {
+// Optional: Handle connection errors
+db.on('error', (err) => {
     console.error(`Mongoose connection error: ${err}`);
 });
 
@@ -25,3 +21,4 @@ module.exports = {
     Movie,
     User
 };
+

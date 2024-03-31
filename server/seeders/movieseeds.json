@@ -1,0 +1,43 @@
+
+[
+  {
+    "title": "Interstellar",
+    "director": "Christopher Nolan",
+    "genre": ["Sci-Fi", "Adventure", "Drama"],
+    "releaseDate":"2014-11-07",
+    "duration": 169,
+    "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival."
+  },
+  {
+    "title": "Inception",
+    "director": "Christopher Nolan",
+    "genre": ["Action", "Adventure", "Sci-Fi"],
+    "releaseDate": "2010-07-16",
+    "duration": 148,
+    "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO."
+  },
+  {
+    "title": "The Social Network",
+    "director": "David Fincher",
+    "genre": ["Biography", "Drama"],
+    "releaseDate": "2010-10-01",
+    "duration": 120,
+    "description": "As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea, and by the co-founder who was later squeezed out of the business."
+  },
+  {
+    "title": "The Grand Budapest Hotel",
+    "director": "Wes Anderson",
+    "genre": ["Adventure", "Comedy", "Drama"],
+    "releaseDate": "2014-03-28T00:00:00.000Z",
+    "duration": 99,
+    "description": "A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel's glorious years under an exceptional concierge."
+  },
+  {
+    "title": "Parasite",
+    "director": "Bong Joon Ho",
+    "genre": ["Comedy", "Drama", "Thriller"],
+    "releaseDate": "2019-05-30T00:00:00.000Z",
+    "duration": 132,
+    "description": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan."
+  }
+]

@@ -1,12 +1,12 @@
 const db = require('../config/connection');
-const { Thought } = require('../models');
-const thoughtSeeds = require('./thoughtSeeds.json');
+const { Movie } = require('../models');
+const movies = require('./movieseeds.json');
 const cleanDB = require('./cleanDB');
 
 db.once('open', async () => {
-  await cleanDB('Thought', 'thoughts');
+  await cleanDB('Movie', 'movies'); // The arguments should match your model and collection names
 
-  await Thought.create(thoughtSeeds);
+  await Movie.create(movies);
 
   console.log('all done!');
   process.exit(0);
