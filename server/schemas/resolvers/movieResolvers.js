@@ -10,8 +10,26 @@ const movieResolvers = {
       const newMovie = new Movie({ title, director, genre, releaseDate, duration, description });
       return await newMovie.save();
     },
-    // Other mutations like updateMovie, deleteMovie 
   },
+  updateMovie: async (_, { id, title, director, genre, releaseDate, duration, description }) => {
+    const updatedMovie = {
+      title, 
+      director, 
+      genre, 
+      releaseDate, 
+      duration, 
+      description
+    };
+    return await Movie.findByIdAndUpdate(id, updatedMovie, { new: true });
+  },
+  deleteMovie: async (_, { id }) => {
+    const deletedMovie = await Movie.findByIdAndDelete(id);
+    if (!deletedMovie) {
+      throw new Error('Movie not found');
+    }
+    return deletedMovie;
+  },
+  
 };
 
 module.exports = movieResolvers;

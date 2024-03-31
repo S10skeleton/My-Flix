@@ -1,27 +1,58 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_THOUGHTS = gql`
-  query getThoughts {
-    thoughts {
-      _id
-      thoughtText
-      thoughtAuthor
-      createdAt
+export const QUERY_MOVIES = gql`
+  query movies {
+    movies {
+      id
+      title
+      director
+      genre
+      releaseDate
+      duration
+      description
     }
   }
 `;
 
-export const QUERY_SINGLE_THOUGHT = gql`
-  query getSingleThought($thoughtId: ID!) {
-    thought(thoughtId: $thoughtId) {
-      _id
-      thoughtText
-      thoughtAuthor
-      createdAt
-      comments {
-        _id
-        commentText
-        createdAt
+export const QUERY_MOVIE = gql`
+  query movie($id: ID!) {
+    movie(id: $id) {
+      id
+      title
+      director
+      genre
+      releaseDate
+      duration
+      description
+    }
+  }
+`;
+
+export const QUERY_USERS = gql`
+  query users {
+    users {
+      id
+      username
+      email
+      favorites {
+        id
+        title
+        // ... other movie fields as needed
+      }
+    }
+  }
+`;
+
+export const QUERY_USER = gql`
+  query user($id: ID!) {
+    user(id: $id) {
+      id
+      username
+      email
+      favorites {
+        id
+        title
+        // ... other movie fields as needed
       }
     }
   }

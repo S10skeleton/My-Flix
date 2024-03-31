@@ -1,10 +1,10 @@
-import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import App from './App.jsx'
-import Home from './pages/Home'
-import SingleThought from './pages/SingleThought'
-import Error from './pages/Error'
+import App from './App.jsx';
+import Home from './pages/Home';
+import Intro from './pages/Intro';
+import Error from './pages/Error';
 
 const router = createBrowserRouter([
   {
@@ -14,16 +14,18 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <Intro />, // Set Intro as the index page
       },
       {
-        path: '/thoughts/:thoughtId',
-        element: <SingleThought />,
+        path: 'home',
+        element: <Home />, // Accessible at '/home'
       },
+      // ... any other routes you may want to add
     ],
   },
+  // ... potentially other top-level routes
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={router} />
-)
+);

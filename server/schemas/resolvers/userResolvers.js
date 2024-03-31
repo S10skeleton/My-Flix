@@ -1,14 +1,14 @@
-const { User, Movie } = require('../../models');
+const { User, Movie } = require("../../models");
 
 const userResolvers = {
   Query: {
     // Fetch all users
     users: async () => {
-      return await User.find({}).populate('favorites');
+      return await User.find({}).populate("favorites");
     },
     // Fetch a single user by ID
     user: async (_, { id }) => {
-      return await User.findById(id).populate('favorites');
+      return await User.findById(id).populate("favorites");
     },
   },
   Mutation: {
@@ -25,13 +25,21 @@ const userResolvers = {
         { new: true }
       );
     },
+    // Delete a movie form favorites
+    deleteUser: async (_, { id }) => {
+      const deletedUser = await User.findByIdAndDelete(id);
+      if (!deletedUser) {
+        throw new Error("User not found");
+      }
+      return deletedUser;
+    },
     // Add a movie to user's favorites
     addFavorite: async (_, { userId, movieId }) => {
       return await User.findByIdAndUpdate(
         userId,
         { $addToSet: { favorites: movieId } }, // $addToSet avoids duplicates
         { new: true }
-      ).populate('favorites');
+      ).populate("favorites");
     },
     // Remove a movie from user's favorites
     removeFavorite: async (_, { userId, movieId }) => {
@@ -39,9 +47,8 @@ const userResolvers = {
         userId,
         { $pull: { favorites: movieId } },
         { new: true }
-      ).populate('favorites');
+      ).populate("favorites");
     },
-    // Other mutations like delete user
   },
 };
 

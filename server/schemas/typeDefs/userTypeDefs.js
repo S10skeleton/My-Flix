@@ -15,11 +15,10 @@ const userTypeDefs = gql`
 
   extend type Mutation {
     addUser(username: String!, email: String!, password: String!): User
-    addUser(username: String!, email: String!, password: String!): User
     updateUser(id: ID!, username: String, email: String): User
+    deleteUser(id: ID!): User
     addFavorite(userId: ID!, movieId: ID!): User
     removeFavorite(userId: ID!, movieId: ID!): User
-    # // ... (other mutations)
   }
 `;
 
