@@ -7,13 +7,20 @@ const userTypeDefs = gql`
     email: String!
     favorites: [Movie]
   }
+  type AuthPayload {
+    token: String!
+    user: User!
+  }
 
   extend type Query {
     users: [User]
     user(id: ID!): User
+    login(email: String!, password: String!): AuthPayload
+
   }
 
   extend type Mutation {
+    loginUser(email: String!, password: String!): AuthPayload
     addUser(username: String!, email: String!, password: String!): User
     updateUser(id: ID!, username: String, email: String): User
     deleteUser(id: ID!): User

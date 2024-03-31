@@ -1,49 +1,40 @@
-// use this to decode a token and get the user's information out of it
-import decode from 'jwt-decode';
+const jwt = require('jsonwebtoken');
+const secret = process.env.JWT_SECRET || 'mysecretssshhhhhhh'; // Fallback to a default secret (not recommended for production)
 
-// create a new class to instantiate for a user
-class AuthService {
-  // get user data
-  getProfile() {
-    return decode(this.getToken());
-  }
+const signToken = ({ username, email, _id }) => {
+  const payload = { username, email, _id };
+  return jwt.sign({ data: payload }, secret, { expiresIn: '10h' });
+};
 
-  // check if user's logged in
-  loggedIn() {
-    // Checks if there is a saved token and it's still valid
-    const token = this.getToken();
-    return !!token && !this.isTokenExpired(token); // handwaiving here
-  }
-
-  // check if token is expired
-  isTokenExpired(token) {
-    try {
-      const decoded = decode(token);
-      if (decoded.exp < Date.now() / 1000) {
-        return true;
-      } else return false;
-    } catch (err) {
-      return false;
+module.exports = {
+  authMiddleware: function (req, res, next) {
+    if (!req || !req.headers) {
+      console.error('Request object is missing or malformed');
+      // Depending on your application's needs, you can handle the error or call next() to continue
+      return res.status(500).send('Internal Server Error'); // Example error handling
     }
-  }
 
-  getToken() {
-    // Retrieves the user token from localStorage
-    return localStorage.getItem('id_token');
-  }
+    let token = req.query.token || req.headers.authorization;
 
-  login(idToken) {
-    // Saves user token to localStorage
-    localStorage.setItem('id_token', idToken);
-    window.location.assign('/');
-  }
+    if (req.headers.authorization) {
+      token = token.split(' ').pop().trim();
+    }
 
-  logout() {
-    // Clear user token and profile data from localStorage
-    localStorage.removeItem('id_token');
-    // this will reload the page and reset the state of the application
-    window.location.assign('/');
-  }
-}
+    if (!token) {
+      return next(); // No token, continue to next middleware without user data
+    }
 
-export default new AuthService();
+    try {
+      const { data } = jwt.verify(token, secret, { maxAge: expiration });
+      req.user = data;
+    } catch (err) {
+      console.error('Invalid token:', err.message);
+    }
+
+    return req; // Return the request object with or without user data
+  },
+  signToken: function ({ username, email, _id }) {
+    const payload = { username, email, _id };
+    return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
+  },
+};

@@ -10,7 +10,6 @@ const movieResolvers = {
       const newMovie = new Movie({ title, director, genre, releaseDate, duration, description });
       return await newMovie.save();
     },
-  },
   updateMovie: async (_, { id, title, director, genre, releaseDate, duration, description }) => {
     const updatedMovie = {
       title, 
@@ -29,7 +28,7 @@ const movieResolvers = {
     }
     return deletedMovie;
   },
-  
+},
 };
 
 module.exports = movieResolvers;

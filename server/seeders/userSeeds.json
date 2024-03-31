@@ -1,0 +1,38 @@
+[
+  {
+    "username": "user01",
+    "email": "user01@example.com",
+    "password": "password123",
+    "favorites": []
+  },
+  {
+    "username": "user02",
+    "email": "user02@example.com",
+    "password": "password123",
+    "favorites": []
+  },
+  {
+    "username": "user03",
+    "email": "user03@example.com",
+    "password": "password123",
+    "favorites": []
+  },
+  {
+    "username": "user04",
+    "email": "user04@example.com",
+    "password": "password123",
+    "favorites": []
+  },
+  {
+    "username": "user05",
+    "email": "user05@example.com",
+    "password": "password123",
+    "favorites": []
+  },
+  {
+    "username": "S10skeleton",
+    "email": "s10skeleton@gmail.com",
+    "password": "pass",
+    "favorites": []
+  }
+]

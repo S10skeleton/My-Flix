@@ -37,7 +37,7 @@ export const QUERY_USERS = gql`
       favorites {
         id
         title
-        // ... other movie fields as needed
+        # // ... other movie fields as needed 
       }
     }
   }
@@ -52,7 +52,7 @@ export const QUERY_USER = gql`
       favorites {
         id
         title
-        // ... other movie fields as needed
+        # // ... other movie fields as needed 
       }
     }
   }

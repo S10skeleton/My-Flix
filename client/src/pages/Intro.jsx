@@ -1,9 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link for navigation
+import React, { useState } from 'react';
+import Login from '../components/Login'; // No need to specify index.jsx, it's inferred
+import Signup from '../components/Signup'; // Adjust the path as per your project structure
+
 
 const IntroPage = () => {
   // TODO: Determine if the user is logged in
   const isLoggedIn = false; // Replace with actual login check
+  const [showLogin, setShowLogin] = useState(false);
+  const [showSignup, setShowSignup] = useState(false);
 
   return (
     <div className="intro-page">
@@ -16,22 +20,17 @@ const IntroPage = () => {
         />
       </div>
 
-      {/* Show login/signup options if not logged in */}
+
+
       {!isLoggedIn && (
         <div className="login-signup-options">
-          <Link to="/login" className="btn btn-primary">Login</Link>
-          <Link to="/signup" className="btn btn-secondary">Sign Up</Link>
+          <button onClick={() => setShowLogin(true)}>Login</button>
+          <button onClick={() => setShowSignup(true)}>Sign Up</button>
         </div>
       )}
 
-      {/* Profile selection or user-specific content if logged in */}
-      {isLoggedIn && (
-        <div className="profile-selection">
-          {/* User profile selection or user-specific content goes here */}
-          <p>Select a profile...</p>
-          {/* Example: <ProfileSelection /> */}
-        </div>
-      )}
+      {showLogin && <Login onClose={() => setShowLogin(false)} />}
+      {showSignup && <Signup onClose={() => setShowSignup(false)} />}
     </div>
   );
 };
