@@ -1,3 +1,5 @@
+// movieResolvers.js
+
 const Movie = require('../../models/movies');
 
 const movieResolvers = {
@@ -16,18 +18,19 @@ const movieResolvers = {
     movie: async (_, { id }) => await Movie.findById(id),
   },
   Mutation: {
-    addMovie: async (_, { title, director, genre, releaseDate, duration, description }) => {
-      const newMovie = new Movie({ title, director, genre, releaseDate, duration, description });
+    addMovie: async (_, { title, director, genre, releaseDate, duration, description, streamingLink }) => {
+      const newMovie = new Movie({ title, director, genre, releaseDate, duration, description, streamingLink });
       return await newMovie.save();
     },
-    updateMovie: async (_, { id, title, director, genre, releaseDate, duration, description }) => {
+    updateMovie: async (_, { id, title, director, genre, releaseDate, duration, description, streamingLink }) => {
       const updatedMovie = {
         title, 
         director, 
         genre, 
         releaseDate, 
         duration, 
-        description
+        description,
+        streamingLink // Include streamingLink in the update
       };
       return await Movie.findByIdAndUpdate(id, updatedMovie, { new: true });
     },

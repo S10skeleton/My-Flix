@@ -1,3 +1,5 @@
+// movieTypeDefs.js
+
 const { gql } = require('apollo-server-express');
 
 const movieTypeDefs = gql`
@@ -9,6 +11,7 @@ const movieTypeDefs = gql`
     releaseDate: String!
     duration: Int
     description: String
+    streamingLink: String # Add the streaming link field
   }
 
   extend type Query {
@@ -17,8 +20,8 @@ const movieTypeDefs = gql`
   }
 
   extend type Mutation {
-    addMovie(title: String!, director: String!, genre: [String]!, releaseDate: String!, duration: Int, description: String): Movie
-    updateMovie(id: ID!, title: String, director: String, genre: [String], releaseDate: String, duration: Int, description: String): Movie
+    addMovie(title: String!, director: String!, genre: [String]!, releaseDate: String!, duration: Int, description: String, streamingLink: String): Movie # Include streamingLink in the mutation
+    updateMovie(id: ID!, title: String, director: String, genre: [String], releaseDate: String, duration: Int, description: String, streamingLink: String): Movie # Include streamingLink in the mutation
     deleteMovie(id: ID!): Movie
   }
 `;
