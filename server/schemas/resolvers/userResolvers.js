@@ -1,6 +1,7 @@
 const { User, Movie } = require("../../models");
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const { signToken } = require("../../utils/Auth");
 
 const userResolvers = {
   Query: {
@@ -12,46 +13,37 @@ const userResolvers = {
     user: async (_, { id }) => {
       return await User.findById(id).populate("favorites");
     },
+  },
 
-        login: async (_, { email, password }) => {
-          // Logic to authenticate user and generate a token
-          const user = await authenticateUser(email, password); // Replace with your auth logic
-          const token = generateToken(user); // Replace with your token generation logic
-    
-          return { token, user };
-        },
-    
-      },
-  
   Mutation: {
     // Create a new user
     addUser: async (_, { username, email, password }) => {
       const newUser = new User({ username, email, password });
-      return await newUser.save();
+      // Save the new user
+      await newUser.save();
+      // Generate a token for the new user
+      const token = signToken(newUser);
+      // Return the token and user information
+      return { token, user: newUser };
     },
     // Login a user
-    loginUser: async (_, { email, password }) => {
-      // Find the user by email
+    loginUser: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
+
       if (!user) {
-        throw new Error('User not found');
+        throw new AuthenticationError("No user with this email found!");
       }
 
-      // Check if password is correct
-      const valid = await bcrypt.compare(password, user.password);
-      if (!valid) {
-        throw new Error('Incorrect password');
+      const correctPw = await user.comparePassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError("Incorrect password!");
       }
 
-      // Generate a token
-      const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
-
-      return {
-        token,
-        user,
-      };
+      const token = signToken(user);
+      return { token, user };
     },
-  
+
     // Update user's information
     updateUser: async (_, { id, username, email }) => {
       return await User.findByIdAndUpdate(

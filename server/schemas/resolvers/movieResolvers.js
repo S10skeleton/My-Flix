@@ -1,8 +1,18 @@
-const Movie = require('../../models');
+const Movie = require('../../models/movies');
 
 const movieResolvers = {
   Query: {
-    movies: async () => await Movie.find({}),
+    movies: async () => {
+      try {
+        // Fetch all movies from the database
+        const movies = await Movie.find({});
+        return movies;
+      } catch (error) {
+        // Handle errors, such as database connection errors
+        console.error(error);
+        throw new Error('Failed to fetch movies');
+      }
+    },
     movie: async (_, { id }) => await Movie.findById(id),
   },
   Mutation: {
@@ -10,25 +20,25 @@ const movieResolvers = {
       const newMovie = new Movie({ title, director, genre, releaseDate, duration, description });
       return await newMovie.save();
     },
-  updateMovie: async (_, { id, title, director, genre, releaseDate, duration, description }) => {
-    const updatedMovie = {
-      title, 
-      director, 
-      genre, 
-      releaseDate, 
-      duration, 
-      description
-    };
-    return await Movie.findByIdAndUpdate(id, updatedMovie, { new: true });
+    updateMovie: async (_, { id, title, director, genre, releaseDate, duration, description }) => {
+      const updatedMovie = {
+        title, 
+        director, 
+        genre, 
+        releaseDate, 
+        duration, 
+        description
+      };
+      return await Movie.findByIdAndUpdate(id, updatedMovie, { new: true });
+    },
+    deleteMovie: async (_, { id }) => {
+      const deletedMovie = await Movie.findByIdAndDelete(id);
+      if (!deletedMovie) {
+        throw new Error('Movie not found');
+      }
+      return deletedMovie;
+    },
   },
-  deleteMovie: async (_, { id }) => {
-    const deletedMovie = await Movie.findByIdAndDelete(id);
-    if (!deletedMovie) {
-      throw new Error('Movie not found');
-    }
-    return deletedMovie;
-  },
-},
 };
 
 module.exports = movieResolvers;

@@ -4,7 +4,7 @@ MyFlix is a personal video streaming application, developed as a full-stack proj
 and portfolio purposes. It allows users to stream movies from a home server, accessible from any <br> 
 location with an internet connection.
 
-![MyFlix](./Development/client/src/assets/MyFlix-Concept.png)
+![MyFlix](./client/src/assets/MyFlix-Concept.png)
 
 
 ## Features

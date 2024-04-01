@@ -1,34 +1,47 @@
 import { useQuery } from '@apollo/client';
-
 import MovieList from '../components/MovieList';
 import { QUERY_MOVIES } from '../utils/queries';
 
 const Home = () => {
-  // Replace QUERY_THOUGHTS with a relevant GraphQL query for fetching movies
-  const { loading, data } = useQuery(QUERY_MOVIES);
-  const movies = data?.movies || [];
+  const { loading, error, data } = useQuery(QUERY_MOVIES);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
+
+  const allMovies = data.movies;
+  console.log(allMovies);
+
+  // Separate user favorites from all movies
+  const userFavorites = allMovies.filter(movie => movie.isFavorite);
+  const remainingMovies = allMovies.filter(movie => !movie.isFavorite);
+
+  // Group remaining movies by genre
+  const moviesByGenre = {};
+  remainingMovies.forEach(movie => {
+    movie.genre.forEach(genre => {
+      if (!moviesByGenre[genre]) {
+        moviesByGenre[genre] = [];
+      }
+      moviesByGenre[genre].push(movie);
+    });
+  });
 
   return (
     <main>
       <div className="flex-row justify-center">
-        {/* Displaying a list of favorite movies */}
-        {/* Assume QUERY_FAVORITE_MOVIES is a query you've defined */}
+        {/* Render user favorites */}
         <div className="movie-row">
-          <h2>Your Favorites</h2>
-          <MovieList movies={movies.filter(movie => movie.isFavorite)} />
+          <h2>User Favorites</h2>
+          <MovieList movies={userFavorites} />
         </div>
 
-        {/* Example of movies categorized by genre */}
-        {/* This assumes you have genres available in your movie data */}
-        {['Comedy', 'Action', 'Drama'].map(genre => (
+        {/* Render movies by genre */}
+        {Object.entries(moviesByGenre).map(([genre, movies]) => (
           <div className="movie-row" key={genre}>
             <h2>{genre}</h2>
-            <MovieList movies={movies.filter(movie => movie.genre.includes(genre))} />
+            <MovieList movies={movies} />
           </div>
         ))}
-
-        {/* Loading state */}
-        {loading && <div>Loading...</div>}
       </div>
     </main>
   );

@@ -11,6 +11,7 @@ const LoginForm = () => {
 
 
 
+
   // Define the login mutation here, outside of the handleFormSubmit
   const [login, { error }] = useMutation(LOGIN_USER);
 
@@ -33,9 +34,12 @@ const LoginForm = () => {
       const { data } = await login({ variables: { ...userFormData } });
       
       // Check if the login was successful and the token exists
-      if (data.login.token) {
-        Auth.login(data.login.token);
+      if (data.loginUser && data.loginUser.token) {
+        Auth.login(data.loginUser.token);
+        console.log("Logged in successfully!");  // Add this line for confirmation
+
       } else {
+        // Handle case where login is unsuccessful
         throw new Error('Login failed');
       }
     } catch (err) {
