@@ -18,8 +18,8 @@ const movieResolvers = {
     movie: async (_, { id }) => await Movie.findById(id),
   },
   Mutation: {
-    addMovie: async (_, { title, director, genre, releaseDate, duration, description, streamingLink }) => {
-      const newMovie = new Movie({ title, director, genre, releaseDate, duration, description, streamingLink });
+    addMovie: async (_, { title, director, genre, releaseDate, duration, description, streamingLink, posterUrl  }) => {
+      const newMovie = new Movie({ title, director, genre, releaseDate, duration, description, streamingLink, posterUrl });
       return await newMovie.save();
     },
     updateMovie: async (_, { id, title, director, genre, releaseDate, duration, description, streamingLink }) => {

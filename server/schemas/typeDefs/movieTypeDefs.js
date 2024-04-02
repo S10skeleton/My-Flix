@@ -11,7 +11,8 @@ const movieTypeDefs = gql`
     releaseDate: String!
     duration: Int
     description: String
-    streamingLink: String # Add the streaming link field
+    streamingLink: String
+    posterUrl: String
   }
 
   extend type Query {

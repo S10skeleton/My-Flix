@@ -10,6 +10,7 @@ export const QUERY_MOVIES = gql`
       releaseDate
       duration
       description
+      posterUrl
     }
   }
 `;
@@ -24,6 +25,7 @@ export const QUERY_MOVIE = gql`
       releaseDate
       duration
       description
+      posterUrl
     }
   }
 `;

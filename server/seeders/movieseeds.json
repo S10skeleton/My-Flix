@@ -7,7 +7,7 @@
     "duration": 152,
     "description": "When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. The Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
     "streamingLink": "https://example.com/the-dark-knight-streaming-link",
-    "posterUrl": "client/src/assets/DarkKnight.jpg"
+    "posterUrl": "/DarkKnight.jpg"
   },
 
   {
@@ -18,7 +18,7 @@
     "duration": 136,
     "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
     "streamingLink": "https://example.com/the-dark-knight-streaming-link",
-    "posterUrl": "https://example.com/the-dark-knight-poster.jpg"
+    "posterUrl": "/Matrix.jpg"
   },
   {
     "title": "Inception",
@@ -28,7 +28,7 @@
     "duration": 148,
     "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.",
     "streamingLink": "https://example.com/the-dark-knight-streaming-link",
-    "posterUrl": "https://example.com/the-dark-knight-poster.jpg"
+    "posterUrl": "/Inception.jpg"
   },
   {
     "title": "The Dark Knight Rises",
@@ -38,7 +38,7 @@
     "duration": 164,
     "description": "Eight years after the Joker's reign of anarchy, Batman, with the help of the enigmatic Catwoman, is forced from his exile to save Gotham City from the brutal guerrilla terrorist Bane.",
     "streamingLink": "https://example.com/the-dark-knight-streaming-link",
-    "posterUrl": "https://example.com/the-dark-knight-poster.jpg"
+    "posterUrl": "/DarkKnightRises.jpg"
   },
   {
     "title": "Mad Max: Fury Road",
@@ -48,7 +48,7 @@
     "duration": 120,
     "description": "In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search of her homeland with the aid of a group of female prisoners, a psychotic worshiper, and a drifter named Max.",
     "streamingLink": "https://example.com/the-dark-knight-streaming-link",
-    "posterUrl": "https://example.com/the-dark-knight-poster.jpg"
+    "posterUrl": "/FuryRoad.jpg"
   },
   {
     "title": "The Exorcist",
@@ -58,7 +58,7 @@
     "duration": 122,
     "description": "When a teenage girl is possessed by a mysterious entity, her mother seeks the help of two priests to save her daughter.",
     "streamingLink": "https://example.com/the-dark-knight-streaming-link",
-    "posterUrl": "https://example.com/the-dark-knight-poster.jpg"
+    "posterUrl": "/TheExorcist.jpg"
   },
   {
     "title": "The Shining",
@@ -68,7 +68,7 @@
     "duration": 146,
     "description": "A family heads to an isolated hotel for the winter where a sinister presence influences the father into violence, while his psychic son sees horrific forebodings from both past and future.",
     "streamingLink": "https://example.com/the-dark-knight-streaming-link",
-    "posterUrl": "https://example.com/the-dark-knight-poster.jpg"
+    "posterUrl": "/TheShining.jpg"
   },
   {
     "title": "Psycho",
@@ -78,7 +78,7 @@
     "duration": 109,
     "description": "A Phoenix secretary embezzles $40,000 from her employer's client, goes on the run, and checks into a remote motel run by a young man under the domination of his mother.",
     "streamingLink": "https://example.com/the-dark-knight-streaming-link",
-    "posterUrl": "https://example.com/the-dark-knight-poster.jpg"
+    "posterUrl": "/Psycho.jpg"
   },
   {
     "title": "Halloween",
@@ -88,7 +88,7 @@
     "duration": 91,
     "description": "Fifteen years after murdering his sister on Halloween night 1963, Michael Myers escapes from a mental hospital and returns to the small town of Haddonfield, Illinois to kill again.",
     "streamingLink": "https://example.com/the-dark-knight-streaming-link",
-    "posterUrl": "https://example.com/the-dark-knight-poster.jpg"
+    "posterUrl": "/Halloween.jpg"
   },
   {
     "title": "The Conjuring",
@@ -98,7 +98,7 @@
     "duration": 112,
     "description": "Paranormal investigators Ed and Lorraine Warren work to help a family terrorized by a dark presence in their farmhouse.",
     "streamingLink": "https://example.com/the-dark-knight-streaming-link",
-    "posterUrl": "https://example.com/the-dark-knight-poster.jpg"
+    "posterUrl": "/TheConjuring.jpg"
   },
   {
     "title": "The Hangover",
@@ -108,7 +108,7 @@
     "duration": 100,
     "description": "Three friends wake up from a bachelor party in Las Vegas, with no memory of the previous night and the bachelor missing.",
     "streamingLink": "https://example.com/the-dark-knight-streaming-link",
-    "posterUrl": "https://example.com/the-dark-knight-poster.jpg"
+    "posterUrl": "/TheHangover.jpg"
   },
   {
     "title": "Superbad",
