@@ -1,0 +1,23 @@
+.fullscreen-intro {
+    position: fixed; /* Full-screen overlay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Or any other color */
+    z-index: 1000; /* Ensures it's above everything else */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .fullscreen-logo {
+    width: 60%; /* Adjust size as needed */
+    height: auto;
+    max-width: 600px; /* Adjust max size as needed */
+  }
+  
+  .intro-page.hidden {
+    display: none; /* Hide the intro page content during the logo display */
+  }
+  

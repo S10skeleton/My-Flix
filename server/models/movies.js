@@ -15,7 +15,7 @@ const movieSchema = new mongoose.Schema({
         required: true
     },
     releaseDate: {
-        type: Date,
+        type: String,
         required: true
     },
     duration: {
@@ -24,6 +24,9 @@ const movieSchema = new mongoose.Schema({
     },
     description: {
         type: String
+    },
+    posterUrl: {
+        type: String // URL of the movie poster
     },
     // You can add more fields as needed
 });

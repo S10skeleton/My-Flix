@@ -1,24 +1,23 @@
-import './App.css';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-import { Outlet } from 'react-router-dom';
+import './Styles/Intro.css';
+import './Styles/Home.css';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { Outlet } from "react-router-dom"; // Import Outlet
 
 const client = new ApolloClient({
-  uri: '/graphql',
+  uri: "/graphql",
   cache: new InMemoryCache(),
 });
 
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div className="flex-column justify-flex-start min-100-vh">
+      <div className="app-container">
         <Header />
-        <div className="container">
-          <Outlet />
-        </div>
+        <Outlet /> {/* Outlet for nested routes */}
         <Footer />
       </div>
     </ApolloProvider>

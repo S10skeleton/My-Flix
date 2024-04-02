@@ -45,6 +45,8 @@ const SignupForm = () => {
 
   return (
     <>
+        <h2>Signup</h2> {/* Header added here */}
+
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
