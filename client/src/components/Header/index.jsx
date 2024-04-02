@@ -1,13 +1,17 @@
+// Header.jsx
+
+import React from 'react';
 import { Link } from 'react-router-dom';
+import '../../Styles/Styles.css'; // Import the CSS file for the Header component
 
 const Header = () => {
   return (
-    <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
-        <Link className="text-light" to="/">
-          <h1 className="m-0">MyFlix</h1>
+    <header className="header">
+      <div className="header-container">
+        <Link className="header-logo" to="/">
+          <h1 className="header-title">MyFlix</h1>
         </Link>
-        <p className="m-0">Your Personal Video Stream</p>
+        <p className="header-description">Your Personal Video Stream</p>
       </div>
     </header>
   );

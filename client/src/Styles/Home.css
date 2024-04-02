@@ -1,0 +1,61 @@
+:root {
+  background-color: rgb(29, 29, 29);
+  color: aliceblue;
+}
+.movie-poster {
+    width: auto; /* Poster width will be the same as the movie-item width */
+    height: 400px; /* Maintain aspect ratio */
+  }
+.movie-item {
+  /* width: 200px;  */
+  /* height: 300px;  */
+  margin-right: 20px; /* Space between items */
+  flex-shrink: 0;
+}
+
+
+
+/* Rest of your CSS remains the same */
+
+.movie-item h4 {
+  max-width: 250px;
+  white-space: wrap;
+  overflow: hidden;
+}
+
+.movie-list-wrapper {
+  position: relative;
+}
+
+.movie-list {
+  display: flex;
+  overflow-x: auto; /* Allows horizontal scrolling */
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.movie-list::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+
+.scroll-hover-area {
+    width: 100px; /* Narrow width */
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+  }
+
+  .scroll-hover-area.left {
+    left: 0;
+  }
+  
+  .scroll-hover-area.right {
+    right: 0;
+  } 
+  
+
+/* Styles for .movie-item and .movie-poster */

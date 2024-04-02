@@ -1,5 +1,6 @@
 import './Styles/Intro.css';
 import './Styles/Home.css';
+import './Styles/Styles.css'
 
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
