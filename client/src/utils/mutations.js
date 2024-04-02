@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const ADD_MOVIE = gql`
-  mutation addMovie($title: String!, $director: String!, $genre: [String]!, $releaseDate: String!, $duration: Int, $description: String) {
-    addMovie(title: $title, director: $director, genre: $genre, releaseDate: $releaseDate, duration: $duration, description: $description) {
+  mutation addMovie($title: String!, $director: String!, $genre: [String]!, $releaseDate: String!, $duration: Int, $description: String, $streamingLink: String) {
+    addMovie(title: $title, director: $director, genre: $genre, releaseDate: $releaseDate, duration: $duration, description: $description, streamingLink: $streamingLink) {
       id
       title
     }
