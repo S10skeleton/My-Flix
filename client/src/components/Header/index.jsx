@@ -2,17 +2,15 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../Styles/Styles.css'; // Import the CSS file for the Header component
+import '../../Styles/Styles.css';
+import MFLogo from '../../assets/MFLogo.webp'
 
 const Header = () => {
   return (
     <header className="header">
-      <div className="header-container">
-        <Link className="header-logo" to="/">
-          <h1 className="header-title">MyFlix</h1>
-        </Link>
-        <p className="header-description">Your Personal Video Stream</p>
-      </div>
+      <img src={MFLogo} alt="MF Logo" className="header-logo" />
+      <h1>My Flix</h1>
+      <p>Your Personal Video Stream</p>
     </header>
   );
 };

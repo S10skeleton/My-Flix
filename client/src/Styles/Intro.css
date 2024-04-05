@@ -21,3 +21,34 @@
     display: none; /* Hide the intro page content during the logo display */
   }
   
+  .loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #000000; /* Your preferred background color */
+    width: 100%; /* Full width of the parent container */
+    max-width: 400px; /* Max width of the form */
+    margin: 80px auto; /* Center the form on the page */
+    border-radius: 15px;
+  }
+  
+  .loginForm .form-group {
+    width: 100%; /* Full width of the parent container */
+    margin-bottom: 15px;
+  }
+  
+  .loginForm .form-control {
+    height: 40px; /* Adjust as needed */
+    padding: 10px;
+  }
+  
+  .loginForm .btn {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+  }
+  
+  /* Additional styles for other elements like labels, headings, etc. */
+  

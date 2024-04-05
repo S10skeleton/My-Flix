@@ -2,23 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // import useHistory hook from react-router-dom
 import MFLogo from '../assets/MFLogo.webp';
 import IntroAudio from '../assets/BidenIntro.mp3'; // Import your audio file
+import LoginForm from '../components/Login';
 
 
 const IntroPage = () => {
-  const isLoggedIn = false; // Replace with actual login check
+  // const isLoggedIn = false; // Replace with actual login check
   const [showIntro, setShowIntro] = useState(true);
-  const navigate = useNavigate(); // useHistory hook for navigation
+  // const navigate = useNavigate(); // useHistory hook for navigation
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntro(false);
-    }, 8000);
+    }, 4000);
     return () => clearTimeout(timer);
   }, []);
 
-  const navigateToAuth = () => {
-    navigate('/auth'); // navigate to the authentication page
-  };
+
 
   return (
     <>
@@ -32,11 +31,9 @@ const IntroPage = () => {
         </div>
       )}
 
-      <div className={`intro-page ${showIntro ? 'hidden' : ''}`}>
-        {!isLoggedIn && (
-          <button onClick={navigateToAuth}>Login/Signup</button>
-        )}
-      </div>
+<div className="intro-page">
+          <LoginForm /> {/* Render LoginForm instead of a button */}
+        </div>
     </>
   );
 };

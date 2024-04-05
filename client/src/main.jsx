@@ -13,7 +13,7 @@ import Intro from './pages/Intro';
 import MovieDetails from './pages/MovieDetails';
 import VideoPlayer from './pages/VideoPlayer'; // Import VideoPlayer component
 
-import AuthPage from './pages/AuthPage'; // Import your AuthPage component
+// import AuthPage from './pages/AuthPage'; // Import your AuthPage component
 import Error from './pages/Error';
 
 const router = createBrowserRouter([
@@ -30,10 +30,10 @@ const router = createBrowserRouter([
         path: 'home',
         element: <Home />, // Accessible at '/home'
       },
-      {
-        path: 'auth',
-        element: <AuthPage />, // Define the /auth route
-      },
+      // {
+      //   path: 'auth',
+      //   element: <AuthPage />, // Define the /auth route
+      // },
       {
         path: 'MovieDetails/:id', // Define the route for MovieDetails with a parameter for the movie ID
         element: <MovieDetails />, // Render the MovieDetails component

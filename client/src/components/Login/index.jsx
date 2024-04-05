@@ -53,6 +53,7 @@ const LoginForm = () => {
 
   return (
     <>
+      <div className='loginForm'>
         <h2>Login</h2> {/* Header added here */}
 
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
@@ -91,6 +92,7 @@ const LoginForm = () => {
           Submit
         </Button>
       </Form>
+      </div>
     </>
   );
 };
