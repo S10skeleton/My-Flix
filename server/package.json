@@ -7,7 +7,7 @@
     "start": "node server.js",
     "watch": "nodemon",
     "seed": "node seeders/seed.js",
-    "postinstall": "npm rebuild bcrypt --build-from-source"
+    "postinstall": "npm rebuild bcrypt"
 
   },
   "keywords": [],
