@@ -22,7 +22,7 @@ const MovieDetails = () => {
   return (
     <div className="details">
       <div>
-      <h2>{movie.title}</h2>
+      <h2 className="title">{movie.title}</h2>
       {movie.posterUrl && ( // Render the poster if available
         <img
           src={movie.posterUrl}

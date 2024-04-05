@@ -57,5 +57,53 @@
     right: 0;
   } 
   
+/* Media query for tablets and smaller screens */
+@media (max-width: 1268px) {
+  .movie-poster {
+    height: 300px; /* Adjust height for smaller screens */
+  }
 
+  .movie-item h4 {
+    max-width: 200px; /* Adjust width for smaller screens */
+  }
+  .scroll-hover-area {
+    display: none; /* Hide hover areas on touch devices */
+  }
+
+  .movie-list {
+    overflow-x: scroll; /* Enable scrolling for touch devices */
+  }
+}
+
+/* Ensure scrollbars are hidden in WebKit browsers */
+.movie-list::-webkit-scrollbar {
+  display: none;
+}
+
+  /* Adjust .movie-list-wrapper, .movie-list, and other styles as needed */
+}
+
+/* Media query for phones */
+@media (max-width: 480px) {
+  .movie-poster {
+    height: 200px; /* Further adjust height for phone screens */
+  }
+
+  .movie-item h4 {
+    max-width: 150px; /* Further adjust width for phone screens */
+  }
+
+  .scroll-hover-area {
+    display: none; /* Hide hover areas on touch devices */
+  }
+
+  .movie-list {
+    overflow-x: scroll; /* Enable scrolling for touch devices */
+  }
+}
+
+/* Ensure scrollbars are hidden in WebKit browsers */
+.movie-list::-webkit-scrollbar {
+  display: none;
+}
 /* Styles for .movie-item and .movie-poster */

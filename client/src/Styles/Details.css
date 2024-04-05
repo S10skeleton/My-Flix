@@ -11,13 +11,15 @@
     max-width: 90%; /* Limit max width of poster */
     height: auto; /* Maintain aspect ratio */
   }
+
   
   .movie-info {
     display: flex;
     flex-direction: column;
     flex: 1; /* Allows movie info to flex */
     max-width: 30%; /* Limit max width of movie info */
-    margin: 50px;
+    margin: 40px;
+    margin-top: 10%;
     padding: 30px; /* Add some internal spacing */
     background-color: rgba(0, 0, 0, 0.5); /* Optional background color for visibility */
     border-radius: 10px; /* Optional styling */
@@ -35,5 +37,40 @@
   .movie-info p {
     max-width: 400px;
     word-wrap: break-word;
+  }
+
+  .title {
+    font-size: 4em; /* Adjust the size as needed */
+    font-weight: bold; /* For a heavier font */
+    color: #fff; /* Example color, change as needed */
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .details {
+      flex-direction: column; /* Stack the elements vertically */
+      align-items: center; /* Center align the stacked items */
+      gap: 20px; /* Adjust gap for mobile */
+    }
+  
+    .movie-posterD {
+      max-width: 100%; /* Full width of the container */
+    }
+  
+    .movie-info {
+      max-width: 90%; /* Adjust max width for mobile */
+      margin: 20px 0; /* Adjust margin for mobile */
+    }
+  
+    .title {
+      font-size: 2.5em; /* Adjust font size for mobile */
+    }
+  }
+  
+  /* Further adjustments for smaller screens (phones) */
+  @media (max-width: 480px) {
+    .title {
+      font-size: 2em; /* Further reduce font size for phones */
+    }
   }
   
