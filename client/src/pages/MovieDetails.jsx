@@ -4,7 +4,6 @@ import { gql, useQuery } from '@apollo/client';
 import { QUERY_MOVIE } from '../utils/queries';
 import { Link } from 'react-router-dom';
 
-
 const MovieDetails = () => {
   // Extract the movieId from the URL parameter
   const { id: movieId } = useParams(); // Use "id" to match the parameter name in the route

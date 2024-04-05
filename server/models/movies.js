@@ -25,6 +25,9 @@ const movieSchema = new mongoose.Schema({
     description: {
         type: String
     },
+    streamingLink: {
+        type: String 
+    },
     posterUrl: {
         type: String // URL of the movie poster
     },

@@ -26,9 +26,11 @@ export const QUERY_MOVIE = gql`
       duration
       description
       posterUrl
+      streamingLink 
     }
   }
 `;
+
 
 export const QUERY_USERS = gql`
   query users {
