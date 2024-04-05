@@ -1,8 +1,8 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import { gql, useQuery } from '@apollo/client';
-import { QUERY_MOVIE } from '../utils/queries';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { useParams } from "react-router-dom";
+import { gql, useQuery } from "@apollo/client";
+import { QUERY_MOVIE } from "../utils/queries";
+import { Link } from "react-router-dom";
 
 const MovieDetails = () => {
   // Extract the movieId from the URL parameter
@@ -17,23 +17,50 @@ const MovieDetails = () => {
   if (error) return <p>Error: {error.message}</p>; // Display the GraphQL error message
   if (!data || !data.movie) return <p>No movie found</p>;
 
-
   const movie = data.movie;
 
   return (
-    <div className='details'>
+    <div className="details">
+      <div>
       <h2>{movie.title}</h2>
       {movie.posterUrl && ( // Render the poster if available
-        <img src={movie.posterUrl} alt={`Poster of ${movie.title}`} className="movie-posterD" />
+        <img
+          src={movie.posterUrl}
+          alt={`Poster of ${movie.title}`}
+          className="movie-posterD"
+        />
       )}
-              <a href={movie.streamingLink} target="_blank" rel="noopener noreferrer">
-          <button>Play in Browser</button>
-        </a>
-      {/* Link the "Play Movie" button to the movie's streaming link */}
-      <Link to={`/play/${movieId}`}>
-        <button>Play Movie</button>
-      </Link>
-      {/* Render other movie details */}
+      </div>
+      <div className="movie-info">
+        <div className="playBtn">
+          <a
+            href={movie.streamingLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button>Play in Browser</button>
+          </a>
+
+          <Link to={`/play/${movieId}`}>
+            <button>Play Movie</button>
+          </Link>
+        </div>
+        <p>
+          <strong>Director:</strong> {movie.director}
+        </p>
+        <p>
+          <strong>Genre:</strong> {movie.genre.join(", ")}
+        </p>
+        <p>
+          <strong>Release Date:</strong> {movie.releaseDate}
+        </p>
+        <p>
+          <strong>Duration:</strong> {movie.duration} minutes
+        </p>
+        <p>
+          <strong>Description:</strong> {movie.description}
+        </p>
+      </div>
     </div>
   );
 };

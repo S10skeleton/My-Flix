@@ -1,5 +1,39 @@
-.movie-posterD {
-    height: 800px;
-    width: auto;
-    margin-left: 13%;
-}
+.details {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 5%; /* Use percentage for responsive gap */
+    padding: 20px;
+  }
+  
+  .movie-posterD {
+    flex: 1; /* Allows the poster to flex */
+    max-width: 90%; /* Limit max width of poster */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .movie-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Allows movie info to flex */
+    max-width: 30%; /* Limit max width of movie info */
+    margin: 50px;
+    padding: 30px; /* Add some internal spacing */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional background color for visibility */
+    border-radius: 10px; /* Optional styling */
+  }
+  
+  .playBtn button {
+    margin: 20px;
+    background-color: rgb(56, 56, 56);
+    border-color: rgb(102, 156, 0);
+    color: aliceblue;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .movie-info p {
+    max-width: 400px;
+    word-wrap: break-word;
+  }
+  

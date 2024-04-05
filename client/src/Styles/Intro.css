@@ -14,7 +14,9 @@
   .fullscreen-logo {
     width: 60%; /* Adjust size as needed */
     height: auto;
-    max-width: 600px; /* Adjust max size as needed */
+    max-width: 600px;
+    border-radius: 25px;
+     /* Adjust max size as needed */
   }
   
   .intro-page.hidden {
@@ -48,6 +50,9 @@
     width: 100%;
     max-width: 400px;
     margin-top: 20px;
+    background-color: rgb(56, 56, 56);
+    border-color: rgb(102, 156, 0);
+
   }
   
   /* Additional styles for other elements like labels, headings, etc. */
