@@ -5,6 +5,7 @@ and portfolio purposes. It allows users to stream movies from a home server, acc
 location with an internet connection.
 
 ![MyFlix](./client/src/assets/MyFlix-Concept.png)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c53ac6d8-9608-408d-be22-36d99803618e/deploy-status)](https://app.netlify.com/sites/enchanting-crumble-281136/deploys)
 
 
 ## Features
