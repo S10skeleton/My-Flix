@@ -15,6 +15,8 @@ const MovieDetails = () => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>; // Display the GraphQL error message
+  if (!data || !data.movie) return <p>No movie found</p>;
+
 
   const movie = data.movie;
 
@@ -24,6 +26,9 @@ const MovieDetails = () => {
       {movie.posterUrl && ( // Render the poster if available
         <img src={movie.posterUrl} alt={`Poster of ${movie.title}`} className="movie-posterD" />
       )}
+              <a href={movie.streamingLink} target="_blank" rel="noopener noreferrer">
+          <button>Play in Browser</button>
+        </a>
       {/* Link the "Play Movie" button to the movie's streaming link */}
       <Link to={`/play/${movieId}`}>
         <button>Play Movie</button>
