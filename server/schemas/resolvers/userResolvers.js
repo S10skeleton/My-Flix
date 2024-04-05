@@ -1,5 +1,5 @@
 const { User, Movie } = require("../../models");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { signToken } = require("../../utils/Auth");
 

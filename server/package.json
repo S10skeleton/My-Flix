@@ -6,9 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon",
-    "seed": "node seeders/seed.js",
-    "postinstall": "npm rebuild bcrypt"
-
+    "seed": "node seeders/seed.js"
+     
   },
   "keywords": [],
   "author": "",
