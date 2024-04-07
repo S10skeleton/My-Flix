@@ -1,0 +1,51 @@
+Date : 2024-04-06 18:16:44
+Directory : c:\Users\s10sk\bootcamp\myflix-shanes-p3\server
+Total : 18 files,  3685 codes, 32 comments, 86 blanks, all 3803 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JSON       |          4 |      3,332 |          0 |          8 |      3,340 |
+| JavaScript |         14 |        353 |         32 |         78 |        463 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                   |         18 |      3,685 |         32 |         86 |      3,803 |
+| . (Files)                                                                           |          3 |      2,644 |          0 |         14 |      2,658 |
+| config                                                                              |          1 |          3 |          0 |          3 |          6 |
+| models                                                                              |          3 |         86 |         16 |         18 |        120 |
+| schemas                                                                             |          6 |        170 |         15 |         31 |        216 |
+| schemas\resolvers                                                                   |          3 |        107 |         14 |         15 |        136 |
+| schemas\typeDefs                                                                    |          3 |         63 |          1 |         16 |         80 |
+| seeders                                                                             |          4 |        749 |          0 |         12 |        761 |
+| utils                                                                               |          1 |         33 |          1 |          8 |         42 |
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                            | language   | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\config\connection.js                | JavaScript |          3 |          0 |          3 |          6 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\models\index.js                     | JavaScript |         13 |          6 |          6 |         25 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\models\movies.js                    | JavaScript |         34 |          4 |          4 |         42 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\models\users.js                     | JavaScript |         39 |          6 |          8 |         53 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\package-lock.json                   | JSON       |      2,583 |          0 |          1 |      2,584 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\package.json                        | JSON       |         27 |          0 |          3 |         30 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\schemas\resolvers\index.js          | JavaScript |          3 |          0 |          2 |          5 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\schemas\resolvers\movieResolvers.js | JavaScript |         41 |          3 |          4 |         48 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\schemas\resolvers\userResolvers.js  | JavaScript |         63 |         11 |          9 |         83 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\schemas\typeDefs\index.js           | JavaScript |         12 |          0 |          4 |         16 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\schemas\typeDefs\movieTypeDefs.js   | JavaScript |         24 |          1 |          6 |         31 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\schemas\typeDefs\userTypeDefs.js    | JavaScript |         27 |          0 |          6 |         33 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\seeders\cleanDB.js                  | JavaScript |         14 |          0 |          3 |         17 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\seeders\movieSeeds.json             | JSON       |        682 |          0 |          3 |        685 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\seeders\seed.js                     | JavaScript |         13 |          0 |          5 |         18 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\seeders\userSeeds.json              | JSON       |         40 |          0 |          1 |         41 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\server.js                           | JavaScript |         34 |          0 |         10 |         44 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\utils\Auth.js                       | JavaScript |         33 |          1 |          8 |         42 |
+| Total                                                                               |            |      3,685 |         32 |         86 |      3,803 |
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

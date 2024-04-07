@@ -1,0 +1,98 @@
+Date : 2024-04-06 18:16:44
+Directory : c:\Users\s10sk\bootcamp\myflix-shanes-p3\server
+Total : 45 files,  -2036 codes, -30 comments, -117 blanks, all -2183 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| JavaScript     |         19 |        145 |         25 |         49 |        219 |
+| XML            |          1 |         -1 |          0 |          0 |         -1 |
+| HTML           |          1 |        -13 |          0 |         -1 |        -14 |
+| CSS            |          4 |       -284 |        -17 |        -60 |       -361 |
+| JavaScript JSX |         14 |       -524 |        -38 |       -109 |       -671 |
+| JSON           |          6 |     -1,359 |          0 |          4 |     -1,355 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                   |         45 |     -2,036 |        -30 |       -117 |     -2,183 |
+| . (Files)                                                                           |          3 |      2,644 |          0 |         14 |      2,658 |
+| ..                                                                                  |         27 |     -5,721 |        -62 |       -203 |     -5,986 |
+| ..\client                                                                           |         27 |     -5,721 |        -62 |       -203 |     -5,986 |
+| ..\client (Files)                                                                   |          5 |     -4,736 |         -2 |         -8 |     -4,746 |
+| ..\client\src                                                                       |         22 |       -985 |        -60 |       -195 |     -1,240 |
+| ..\client\src (Files)                                                               |          2 |        -65 |         -7 |        -13 |        -85 |
+| ..\client\src\Styles                                                                |          4 |       -284 |        -17 |        -60 |       -361 |
+| ..\client\src\assets                                                                |          1 |         -1 |          0 |          0 |         -1 |
+| ..\client\src\components                                                            |          6 |       -283 |        -12 |        -55 |       -350 |
+| ..\client\src\components\Contact                                                    |          1 |        -13 |          0 |         -3 |        -16 |
+| ..\client\src\components\Footer                                                     |          1 |        -21 |          0 |         -6 |        -27 |
+| ..\client\src\components\Header                                                     |          1 |        -14 |         -1 |         -3 |        -18 |
+| ..\client\src\components\Login                                                      |          1 |        -78 |         -5 |        -18 |       -101 |
+| ..\client\src\components\MovieList                                                  |          1 |        -70 |         -1 |        -10 |        -81 |
+| ..\client\src\components\Signup                                                     |          1 |        -87 |         -5 |        -15 |       -107 |
+| ..\client\src\pages                                                                 |          6 |       -176 |        -19 |        -41 |       -236 |
+| ..\client\src\utils                                                                 |          3 |       -176 |         -5 |        -26 |       -207 |
+| config                                                                              |          1 |          3 |          0 |          3 |          6 |
+| models                                                                              |          3 |         86 |         16 |         18 |        120 |
+| schemas                                                                             |          6 |        170 |         15 |         31 |        216 |
+| schemas\resolvers                                                                   |          3 |        107 |         14 |         15 |        136 |
+| schemas\typeDefs                                                                    |          3 |         63 |          1 |         16 |         80 |
+| seeders                                                                             |          4 |        749 |          0 |         12 |        761 |
+| utils                                                                               |          1 |         33 |          1 |          8 |         42 |
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                            | language       | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\.eslintrc.cjs                       | JavaScript     |        -16 |          0 |         -1 |        -17 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\index.html                          | HTML           |        -13 |          0 |         -1 |        -14 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\package-lock.json                   | JSON           |     -4,658 |          0 |         -1 |     -4,659 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\package.json                        | JSON           |        -33 |          0 |         -3 |        -36 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\App.jsx                         | JavaScript JSX |        -24 |          0 |         -7 |        -31 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\Styles\Details.css              | CSS            |        -62 |         -2 |        -12 |        -76 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\Styles\Home.css                 | CSS            |        -79 |         -9 |        -22 |       -110 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\Styles\Intro.css                | CSS            |        -48 |         -2 |         -9 |        -59 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\Styles\Styles.css               | CSS            |        -95 |         -4 |        -17 |       -116 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\assets\react.svg                | XML            |         -1 |          0 |          0 |         -1 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\components\Contact\index.jsx    | JavaScript JSX |        -13 |          0 |         -3 |        -16 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\components\Footer\index.jsx     | JavaScript JSX |        -21 |          0 |         -6 |        -27 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\components\Header\index.jsx     | JavaScript JSX |        -14 |         -1 |         -3 |        -18 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\components\Login\index.jsx      | JavaScript JSX |        -78 |         -5 |        -18 |       -101 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\components\MovieList\index.jsx  | JavaScript JSX |        -70 |         -1 |        -10 |        -81 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\components\Signup\index.jsx     | JavaScript JSX |        -87 |         -5 |        -15 |       -107 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\main.jsx                        | JavaScript JSX |        -41 |         -7 |         -6 |        -54 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\pages\AuthPage.jsx              | JavaScript JSX |          0 |        -11 |         -3 |        -14 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\pages\Error.jsx                 | JavaScript JSX |        -14 |          0 |         -2 |        -16 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\pages\Home.jsx                  | JavaScript JSX |        -31 |         -2 |         -7 |        -40 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\pages\Intro.jsx                 | JavaScript JSX |        -31 |         -2 |         -9 |        -42 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\pages\MovieDetails.jsx          | JavaScript JSX |        -59 |         -2 |         -8 |        -69 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\pages\VideoPlayer.jsx           | JavaScript JSX |        -41 |         -2 |        -12 |        -55 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\utils\auth.js                   | JavaScript     |        -30 |         -2 |         -8 |        -40 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\utils\mutations.js              | JavaScript     |        -88 |         -3 |        -13 |       -104 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\src\utils\queries.js                | JavaScript     |        -58 |          0 |         -5 |        -63 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\client\vite.config.js                      | JavaScript     |        -16 |         -2 |         -2 |        -20 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\config\connection.js                | JavaScript     |          3 |          0 |          3 |          6 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\models\index.js                     | JavaScript     |         13 |          6 |          6 |         25 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\models\movies.js                    | JavaScript     |         34 |          4 |          4 |         42 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\models\users.js                     | JavaScript     |         39 |          6 |          8 |         53 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\package-lock.json                   | JSON           |      2,583 |          0 |          1 |      2,584 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\package.json                        | JSON           |         27 |          0 |          3 |         30 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\schemas\resolvers\index.js          | JavaScript     |          3 |          0 |          2 |          5 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\schemas\resolvers\movieResolvers.js | JavaScript     |         41 |          3 |          4 |         48 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\schemas\resolvers\userResolvers.js  | JavaScript     |         63 |         11 |          9 |         83 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\schemas\typeDefs\index.js           | JavaScript     |         12 |          0 |          4 |         16 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\schemas\typeDefs\movieTypeDefs.js   | JavaScript     |         24 |          1 |          6 |         31 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\schemas\typeDefs\userTypeDefs.js    | JavaScript     |         27 |          0 |          6 |         33 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\seeders\cleanDB.js                  | JavaScript     |         14 |          0 |          3 |         17 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\seeders\movieSeeds.json             | JSON           |        682 |          0 |          3 |        685 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\seeders\seed.js                     | JavaScript     |         13 |          0 |          5 |         18 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\seeders\userSeeds.json              | JSON           |         40 |          0 |          1 |         41 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\server.js                           | JavaScript     |         34 |          0 |         10 |         44 |
+| c:\Users\s10sk\bootcamp\myflix-shanes-p3\server\utils\Auth.js                       | JavaScript     |         33 |          1 |          8 |         42 |
+| Total                                                                               |                |     -2,036 |        -30 |       -117 |     -2,183 |
++-------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
