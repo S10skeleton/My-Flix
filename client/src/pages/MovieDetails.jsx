@@ -21,7 +21,7 @@ const MovieDetails = () => {
 
   return (
     <div className="details">
-      <div>
+      <div className="leftDetail">
       <h2 className="title">{movie.title}</h2>
       {movie.posterUrl && ( // Render the poster if available
         <img

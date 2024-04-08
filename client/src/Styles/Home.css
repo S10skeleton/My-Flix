@@ -7,8 +7,6 @@
     height: 400px; /* Maintain aspect ratio */
   }
 .movie-item {
-  /* width: 200px;  */
-  /* height: 300px;  */
   margin-right: 20px; /* Space between items */
   flex-shrink: 0;
 }
@@ -21,8 +19,12 @@
   max-width: 250px;
   white-space: wrap;
   overflow: hidden;
+  
 }
 
+.movieRow {
+  padding: 30px;
+}
 .movie-list-wrapper {
   position: relative;
 }
@@ -33,6 +35,7 @@
   scroll-behavior: smooth;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
+
 }
 
 .movie-list::-webkit-scrollbar {

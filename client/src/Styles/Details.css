@@ -2,14 +2,15 @@
     display: flex;
     align-items: start;
     justify-content: center;
-    gap: 5%; /* Use percentage for responsive gap */
+    /* gap: 5%; */
     padding: 20px;
   }
   
   .movie-posterD {
     flex: 1; /* Allows the poster to flex */
-    max-width: 90%; /* Limit max width of poster */
+    max-width: 800px; /* Limit max width of poster */
     height: auto; /* Maintain aspect ratio */
+    border-radius: 15px;
   }
 
   
@@ -17,10 +18,10 @@
     display: flex;
     flex-direction: column;
     flex: 1; /* Allows movie info to flex */
-    max-width: 30%; /* Limit max width of movie info */
-    margin: 40px;
+    max-width: 30%; 
+    margin: 8%;
     margin-top: 10%;
-    padding: 30px; /* Add some internal spacing */
+    padding: 30px;
     background-color: rgba(0, 0, 0, 0.5); /* Optional background color for visibility */
     border-radius: 10px; /* Optional styling */
   }
@@ -43,6 +44,7 @@
     font-size: 4em; /* Adjust the size as needed */
     font-weight: bold; /* For a heavier font */
     color: #fff; /* Example color, change as needed */
+    margin: 20px;
 }
 
 /* Media queries for mobile responsiveness */

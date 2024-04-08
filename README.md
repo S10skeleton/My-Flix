@@ -2,9 +2,10 @@
 
 MyFlix is a personal video streaming application, developed as a full-stack project for educational <br> 
 and portfolio purposes. It allows users to stream movies from a home server, accessible from any <br> 
-location with an internet connection.
+location with an internet connection and responsive to media query.
 
-![MyFlix](./client/src/assets/MyFlix-Concept.png)
+![MyFlix](./client/src/assets/myflixscreenshot.png)
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c53ac6d8-9608-408d-be22-36d99803618e/deploy-status)](https://app.netlify.com/sites/enchanting-crumble-281136/deploys)
 
 
@@ -20,7 +21,7 @@ location with an internet connection.
 ## Technologies Used
 
 - **Frontend:** React
-- **Backend:** Node.js, Express.js
+- **Backend:** Node.js, Express.js, Apache2
 - **Database:** MongoDB with Mongoose ODM
 - **Authentication:** JWT (JSON Web Tokens)
 - **API Handling:** GraphQL for data retrieval and manipulation
@@ -51,11 +52,13 @@ Although this is not a requirement for your project, see if you can also impleme
 
 3. Setup environment variables in `.env` file.
 
-4. Start the server: 'npm start'
+4. Build the site: 'npm run build'
+
+5. Start the server: 'npm start'
 
 ## Usage
 
-After starting the server, navigate to `http://localhost:3000` on your web browser to access the MyFlix application.
+After starting the server, navigate to `http://localhost:3000` on your web browser to access the MyFlix application. You will obviously need to provite your own movie files
 
 ## Contributing
 

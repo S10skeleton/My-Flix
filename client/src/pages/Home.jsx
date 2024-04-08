@@ -23,7 +23,7 @@ const Home = () => {
 
   return (
     <main>
-      <div className="flex-row justify-center">
+      <div className="flex-row justify-center movieRow">
         {/* Render movies by genre */}
         {Object.entries(moviesByGenre).map(([genre, movies]) => (
           <div className="movie-row" key={genre}>
