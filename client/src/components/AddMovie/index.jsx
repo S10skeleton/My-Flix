@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
-import { ADD_MOVIE } from '../../utils/mutations';
+import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { ADD_MOVIE } from "../../utils/mutations";
 
 const AddMovie = ({ onClose }) => {
   const [formState, setFormState] = useState({
-    title: '',
-    director: '',
-    genre: '',
-    releaseDate: '',
-    duration: '',
-    description: '',
-    streamingLink: '',
-    trailerLink: '',
-    posterUrl: ''
+    title: "",
+    director: "",
+    genre: "",
+    releaseDate: "",
+    duration: "",
+    description: "",
+    streamingLink: "",
+    trailerLink: "",
+    posterUrl: "",
   });
   const [addMovie] = useMutation(ADD_MOVIE);
   const [isSuccessful, setIsSuccessful] = useState(false);
@@ -24,21 +24,41 @@ const AddMovie = ({ onClose }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const { title, director, genre, releaseDate, description, streamingLink, trailerLink, posterUrl } = formState;
+    const {
+      title,
+      director,
+      genre,
+      releaseDate,
+      description,
+      streamingLink,
+      trailerLink,
+      posterUrl,
+    } = formState;
     const duration = parseInt(formState.duration, 10); // Convert to integer
 
     try {
-      await addMovie({ variables: { title, director, genre, releaseDate, duration, description, streamingLink, trailerLink, posterUrl } });
+      await addMovie({
+        variables: {
+          title,
+          director,
+          genre,
+          releaseDate,
+          duration,
+          description,
+          streamingLink,
+          trailerLink,
+          posterUrl,
+        },
+      });
       setIsSuccessful(true); // Set success state to true
       setTimeout(() => {
         onClose(); // Close the form after 2 seconds
         setIsSuccessful(false); // Reset success message
       }, 2000);
     } catch (e) {
-      console.error('Error:', e);
+      console.error("Error:", e);
     }
   };
-  
 
   return (
     <div className="add-movie-modal">

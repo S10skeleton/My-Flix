@@ -4,6 +4,17 @@ const Movie = require("../../models/movies");
 
 const movieResolvers = {
   Query: {
+    randomMovie: async () => {
+      try {
+        const count = await Movie.countDocuments();
+        const random = Math.floor(Math.random() * count);
+        const randomMovie = await Movie.findOne().skip(random);
+        return randomMovie;
+      } catch (error) {
+        console.error(error);
+        throw new Error("Failed to fetch a random movie");
+      }
+    },
     movies: async () => {
       try {
         // Fetch all movies from the database
@@ -14,6 +25,7 @@ const movieResolvers = {
         console.error(error);
         throw new Error("Failed to fetch movies");
       }
+      
     },
     movie: async (_, { id }) => await Movie.findById(id),
   },

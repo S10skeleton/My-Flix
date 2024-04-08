@@ -52,6 +52,7 @@
     z-index: 10;
   }
 
+
   .scroll-hover-area.left {
     left: 0;
   }
@@ -59,6 +60,81 @@
   .scroll-hover-area.right {
     right: 0;
   } 
+
+  .add-movie-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1a1a1a; /* Dark background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(99, 99, 99, 0.5);
+    z-index: 1000;
+    width: auto;
+    max-width: 400px; /* Control the maximum width */
+  }
+  
+  .add-movie-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Spacing between inputs */
+  }
+  
+  .add-movie-modal input,
+  .add-movie-modal textarea {
+    width: 100%; /* Full width */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555; /* Subtle border */
+    border-radius: 5px;
+    background-color: #333; /* Dark input background */
+    color: #fff; /* Light text color */
+  }
+  
+  .add-movie-modal button {
+    padding: 10px;
+    background-color: #383838;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-movie-modal button:hover {
+    background-color: #4CAF50; /* Change color on hover */
+  }
+  
+
+/* Styling for the buttons */
+.home-top-buttons {
+  display: flex; /* Set the container to use Flexbox */
+  justify-content: space-around; /* Space out the buttons evenly */
+  align-items: center; /* Align items vertically */
+  margin-top: 20px; /* Spacing at the top */
+  padding: 0 10px; /* Padding on the sides */
+}
+
+.home-button {
+  padding: 10px 20px;
+  background-color: #181818; /* Dark background */
+  color: aliceblue;
+  border-radius: 5px;
+  border: 2px solid #8ae000; /* Adjusted for border color */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 16px; /* Adjust size as needed */
+}
+
+.home-button:hover {
+  background-color: #367c39; /* Darker shade of green on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+
+  /* Add any additional styling as necessary */
+  
   
 /* Media query for tablets and smaller screens */
 @media (max-width: 1268px) {

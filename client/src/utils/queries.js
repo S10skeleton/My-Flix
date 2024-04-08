@@ -62,3 +62,20 @@ export const QUERY_USER = gql`
     }
   }
 `;
+// queries.js
+export const QUERY_RANDOM_MOVIE = gql`
+  query randomMovie {
+    randomMovie {
+      id
+      title
+      director
+      genre
+      releaseDate
+      duration
+      description
+      streamingLink
+      trailerLink
+      posterUrl
+    }
+  }
+`;
