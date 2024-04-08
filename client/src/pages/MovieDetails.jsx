@@ -57,8 +57,18 @@ const MovieDetails = () => {
           <strong>Description:</strong> {movie.description}
         </p>
         <p>
-          <strong>Watch Trailer Below:</strong>
+          <strong>Watch Trailer Below: <br />
+          If On Mobile Use Link Below </strong>
         </p>
+        <div className="playBtn">
+          <a
+            href={movie.trailerLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button>Play Trailer</button>
+          </a>
+        </div>
 
         <div className="trailer-player movie-trailer">
           <video controls>
