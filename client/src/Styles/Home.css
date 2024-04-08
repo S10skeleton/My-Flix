@@ -91,6 +91,9 @@
   .movie-poster {
     height: 200px; /* Further adjust height for phone screens */
   }
+  .movieRow {
+    padding: 5px;
+  }
 
   .movie-item h4 {
     max-width: 150px; /* Further adjust width for phone screens */
