@@ -27,6 +27,7 @@ export const QUERY_MOVIE = gql`
       description
       posterUrl
       streamingLink 
+      trailerLink
     }
   }
 `;

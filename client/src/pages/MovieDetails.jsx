@@ -22,14 +22,14 @@ const MovieDetails = () => {
   return (
     <div className="details">
       <div className="leftDetail">
-      <h2 className="title">{movie.title}</h2>
-      {movie.posterUrl && ( // Render the poster if available
-        <img
-          src={movie.posterUrl}
-          alt={`Poster of ${movie.title}`}
-          className="movie-posterD"
-        />
-      )}
+        <h2 className="title">{movie.title}</h2>
+        {movie.posterUrl && ( // Render the poster if available
+          <img
+            src={movie.posterUrl}
+            alt={`Poster of ${movie.title}`}
+            className="movie-posterD"
+          />
+        )}
       </div>
       <div className="movie-info">
         <div className="playBtn">
@@ -38,12 +38,8 @@ const MovieDetails = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button>Play in Browser</button>
-          </a>
-
-          <Link to={`/play/${movieId}`}>
             <button>Play Movie</button>
-          </Link>
+          </a>
         </div>
         <p>
           <strong>Director:</strong> {movie.director}
@@ -60,6 +56,16 @@ const MovieDetails = () => {
         <p>
           <strong>Description:</strong> {movie.description}
         </p>
+        <p>
+          <strong>Watch Trailer Below:</strong>
+        </p>
+
+        <div className="trailer-player movie-trailer">
+          <video controls>
+            <source src={movie.trailerLink} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     </div>
   );

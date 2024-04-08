@@ -12,6 +12,7 @@ const movieTypeDefs = gql`
     duration: Int
     description: String
     streamingLink: String
+    trailerLink: String
     posterUrl: String
   }
 
@@ -21,8 +22,8 @@ const movieTypeDefs = gql`
   }
 
   extend type Mutation {
-    addMovie(title: String!, director: String!, genre: [String]!, releaseDate: String!, duration: Int, description: String, streamingLink: String): Movie # Include streamingLink in the mutation
-    updateMovie(id: ID!, title: String, director: String, genre: [String], releaseDate: String, duration: Int, description: String, streamingLink: String): Movie # Include streamingLink in the mutation
+    addMovie(title: String!, director: String!, genre: [String]!, releaseDate: String!, duration: Int, description: String, streamingLink: String, trailerLink: String): Movie # Include streamingLink in the mutation
+    updateMovie(id: ID!, title: String, director: String, genre: [String], releaseDate: String, duration: Int, description: String, streamingLink: String, trailerLink: String): Movie # Include streamingLink in the mutation
     deleteMovie(id: ID!): Movie
   }
 `;

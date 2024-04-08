@@ -25,6 +25,12 @@
     background-color: rgba(0, 0, 0, 0.5); /* Optional background color for visibility */
     border-radius: 10px; /* Optional styling */
   }
+ 
+  .movie-trailer video {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
   
   .playBtn button {
     margin: 20px;
