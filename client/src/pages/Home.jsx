@@ -1,9 +1,16 @@
+import React, { useState } from 'react'; // Corrected import statement
 import { useQuery } from '@apollo/client';
 import MovieList from '../components/MovieList';
 import { QUERY_MOVIES } from '../utils/queries';
+import AddMovie from '../components/AddMovie';
+
 
 const Home = () => {
   const { loading, error, data } = useQuery(QUERY_MOVIES);
+  const [showAddMovie, setShowAddMovie] = useState(false);
+
+  const handleOpenAddMovie = () => setShowAddMovie(true);
+  const handleCloseAddMovie = () => setShowAddMovie(false);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
@@ -23,6 +30,11 @@ const Home = () => {
 
   return (
     <main>
+          <div>
+      <button onClick={handleOpenAddMovie}>Add a Movie</button>
+      {showAddMovie && <AddMovie onClose={handleCloseAddMovie} />}
+      {/* Rest of your Home page content */}
+    </div>
       <div className="flex-row justify-center movieRow">
         {/* Render movies by genre */}
         {Object.entries(moviesByGenre).map(([genre, movies]) => (

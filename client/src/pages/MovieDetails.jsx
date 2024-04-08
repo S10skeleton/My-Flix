@@ -58,7 +58,7 @@ const MovieDetails = () => {
         </p>
         <p>
           <strong>Watch Trailer Below: <br />
-          If On Mobile Use Link Below </strong>
+          If On Mobile Use Link: </strong>
         </p>
         <div className="playBtn">
           <a
