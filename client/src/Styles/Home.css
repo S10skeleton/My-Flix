@@ -60,42 +60,31 @@
   .scroll-hover-area.right {
     right: 0;
   } 
-
-  .add-movie-modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #1a1a1a; /* Dark background */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(99, 99, 99, 0.5);
-    z-index: 1000;
-    width: auto;
-    max-width: 400px; /* Control the maximum width */
-  }
-  
   .add-movie-content {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap; /* Allow wrapping to next line */
     gap: 10px; /* Spacing between inputs */
+  }
+  
+  .add-movie-content > * {
+    flex: 1 1 45%; /* Each input field takes up equal space with a maximum width of 45% */
   }
   
   .add-movie-modal input,
   .add-movie-modal textarea {
-    width: 100%; /* Full width */
+    width: 100%; /* Full width of each input field */
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #555; /* Subtle border */
+    border: 1px solid #555;
     border-radius: 5px;
-    background-color: #333; /* Dark input background */
-    color: #fff; /* Light text color */
+    background-color: #333;
+    color: #fff;
   }
   
   .add-movie-modal button {
     padding: 10px;
     background-color: #383838;
-    border: none;
+    border-color: #7fe000;
     border-radius: 5px;
     color: white;
     cursor: pointer;
@@ -103,8 +92,9 @@
   }
   
   .add-movie-modal button:hover {
-    background-color: #4CAF50; /* Change color on hover */
+    background-color: #4CAF50;
   }
+  
   
 
 /* Styling for the buttons */

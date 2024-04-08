@@ -4,9 +4,13 @@ MyFlix is a personal video streaming application, developed as a full-stack proj
 and portfolio purposes. It allows users to stream movies from a home server, accessible from any <br> 
 location with an internet connection and responsive to media query.
 
+
 ![MyFlix](./client/src/assets/myflixscreenshot.png)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c53ac6d8-9608-408d-be22-36d99803618e/deploy-status)](https://app.netlify.com/sites/enchanting-crumble-281136/deploys)
+
+## Google Docs Presentation
+You can view the presentation slides [here](https://docs.google.com/presentation/d/128JSFMu3_wx4gAGJpiR7IASmtEKmcJ-j7Wwim_KI3wg/edit?usp=drive_link).
 
 
 ## Features
@@ -34,7 +38,7 @@ Although this is not a requirement for your project, see if you can also impleme
 
 - Uses a service worker for offline functionality
 
-- Is installable
+- Downloadable movies files for offline use
 
 ## Getting Started
 
@@ -59,6 +63,11 @@ Although this is not a requirement for your project, see if you can also impleme
 ## Usage
 
 After starting the server, navigate to `http://localhost:3000` on your web browser to access the MyFlix application. You will obviously need to provite your own movie files
+
+## Deployment
+
+[My Flix](https://myflix.mov)
+
 
 ## Contributing
 
