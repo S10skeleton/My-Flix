@@ -36,5 +36,11 @@
     "favorites": ["660a55bd38784adef9073af6",
     "660a55bd38784adef9073afe", "660a55bd38784adef9073b02",
     "660a55bd38784adef9073b07","660a55bd38784adef9073b0b"]
+  },
+  {
+    "username": "Jay",
+    "email": "Jay@gmail.com",
+    "password": "taco",
+    "favorites": []
   }
 ]
