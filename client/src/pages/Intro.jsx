@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // import useHistory hook from react-router-dom
-import MFLogo from '../assets/MFLogo.webp';
-import IntroAudio from '../assets/BidenIntro.mp3'; // Import your audio file
-import LoginForm from '../components/Login';
-
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // import useHistory hook from react-router-dom
+import MFLogo from "../assets/MFLogo.webp";
+import LoginForm from "../components/Login";
 
 const IntroPage = () => {
   // const isLoggedIn = false; // Replace with actual login check
@@ -13,27 +11,21 @@ const IntroPage = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntro(false);
-    }, 4000);
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
-
-
 
   return (
     <>
       {showIntro && (
         <div className="fullscreen-intro">
           <img src={MFLogo} alt="Intro Logo" className="fullscreen-logo" />
-          <audio autoPlay>
-            <source src={IntroAudio} type="audio/mp3" />
-            Your browser does not support the audio element.
-          </audio>
         </div>
       )}
 
-<div className="intro-page">
-          <LoginForm /> {/* Render LoginForm instead of a button */}
-        </div>
+      <div className="intro-page">
+        <LoginForm /> {/* Render LoginForm instead of a button */}
+      </div>
     </>
   );
 };

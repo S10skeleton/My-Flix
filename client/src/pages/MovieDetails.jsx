@@ -22,6 +22,9 @@ const MovieDetails = () => {
   return (
     <div className="details">
       <div className="leftDetail">
+      <Link to="/home" className="back-button">
+          <button>Back to Home</button>
+        </Link>
         <h2 className="title">{movie.title}</h2>
         {movie.posterUrl && ( // Render the poster if available
           <img

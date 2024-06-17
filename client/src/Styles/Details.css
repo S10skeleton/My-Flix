@@ -53,6 +53,17 @@
     margin: 20px;
 }
 
+button {
+  padding: 10px 20px;
+  background-color: #07070731; /* Dark background */
+  color: aliceblue;
+  border-radius: 5px;
+  border: 2px solid #8ae000; /* Adjusted for border color */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 16px; /* Adjust size as needed */
+}
+
 /* Media queries for mobile responsiveness */
 @media (max-width: 768px) {
     .details {

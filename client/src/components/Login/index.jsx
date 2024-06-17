@@ -50,6 +50,23 @@ const LoginForm = () => {
     setUserFormData({ email: '', password: '' });
   };
 
+  const handleGuestLogin = async () => {
+    try {
+      const guestCredentials = { email: 'user01@example.com', password: 'password123' };
+      const { data } = await login({ variables: { ...guestCredentials } });
+
+      if (data.loginUser && data.loginUser.token) {
+        Auth.login(data.loginUser.token);
+        console.log("Guest logged in successfully!");
+      } else {
+        throw new Error('Guest login failed');
+      }
+    } catch (err) {
+      console.error(err);
+      setShowAlert(true);
+    }
+  };
+
 
   return (
     <>
@@ -92,6 +109,13 @@ const LoginForm = () => {
           Login
         </Button>
       </Form>
+      <Button
+          onClick={handleGuestLogin}
+          variant='secondary'
+          className='mt-3'>
+          Guest/Demo Login
+        </Button>
+        <p className='disclaimer'>Playback unavailable in Demo</p>
       </div>
     </>
   );
