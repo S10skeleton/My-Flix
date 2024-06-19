@@ -14,7 +14,7 @@ const IntroPage = () => {
     }, 2000);
     return () => clearTimeout(timer);
   }, []);
-
+// intro video
   return (
     <>
       {showIntro && (
