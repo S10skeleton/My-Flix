@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // import useHistory hook from react-router-dom
+import { useNavigate } from "react-router-dom"; 
 import MFLogo from "../assets/MFLogo.webp";
 import LoginForm from "../components/Login";
 
 const IntroPage = () => {
-  // const isLoggedIn = false; // Replace with actual login check
+
   const [showIntro, setShowIntro] = useState(true);
-  // const navigate = useNavigate(); // useHistory hook for navigation
+ 
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -24,7 +24,7 @@ const IntroPage = () => {
       )}
 
       <div className="intro-page">
-        <LoginForm /> {/* Render LoginForm instead of a button */}
+        <LoginForm />
       </div>
     </>
   );
