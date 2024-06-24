@@ -1,0 +1,9 @@
+[build]
+  command = "npm run render-build"
+  functions = "netlify/functions"
+  publish = "client/dist"
+
+[[redirects]]
+  from = "/graphql"
+  to = "/.netlify/functions/graphql"
+  status = 200
