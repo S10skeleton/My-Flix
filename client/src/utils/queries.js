@@ -79,4 +79,3 @@ export const QUERY_RANDOM_MOVIE = gql`
     }
   }
 `;
-// test test 
