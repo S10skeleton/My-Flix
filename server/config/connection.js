@@ -4,4 +4,3 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://s10skeleton:Goesboom1
 
 module.exports = mongoose.connection;
 
-// test 
