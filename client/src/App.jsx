@@ -19,7 +19,7 @@ function App() {
     <ApolloProvider client={client}>
       <div className="app-container">
         <Header />
-        <Outlet /> {/* Outlet for nested routes */}
+        <Outlet />
         <Footer />
       </div>
     </ApolloProvider>
