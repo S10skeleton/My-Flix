@@ -50,21 +50,9 @@ const LoginForm = () => {
     setUserFormData({ email: '', password: '' });
   };
 
-  const handleGuestLogin = async () => {
-    try {
-      const guestCredentials = { email: 'user01@example.com', password: 'password123' };
-      const { data } = await login({ variables: { ...guestCredentials } });
-
-      if (data.loginUser && data.loginUser.token) {
-        Auth.login(data.loginUser.token);
-        console.log("Guest logged in successfully!");
-      } else {
-        throw new Error('Guest login failed');
-      }
-    } catch (err) {
-      console.error(err);
-      setShowAlert(true);
-    }
+  const handleGuestLogin = () => {
+    // Redirect to the home page for guest login
+    window.location.assign('/home');
   };
 
 
