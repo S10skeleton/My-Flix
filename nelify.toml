@@ -1,0 +1,14 @@
+[build]
+  publish = "build"  # This should match your build output directory
+  command = "npm run build"  # Your build command
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/graphql"
+  to = "https://myflix-backend.herokuapp.com/graphql"
+  status = 200
+  force = true  # Use force if necessary to ensure the redirect happens
