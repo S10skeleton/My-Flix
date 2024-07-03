@@ -20,11 +20,15 @@ const server = new ApolloServer({
 const startApolloServer = async () => {
   await server.start();
 
-  app.use(cors({ origin: 'https://myflix.mov' })); // Allow requests from your Netlify domain
-  app.use(authMiddleware);
+  app.use(cors({ origin: 'https://myflix.mov', credentials: true })); // Allow requests from your Netlify domain
 
   app.use(express.urlencoded({ extended: false }));
   app.use(express.json());
+
+  // Apply Apollo GraphQL middleware and set the path to /graphql
+  app.use('/graphql', expressMiddleware(server, {
+    context: ({ req }) => ({ req })
+  }));
 
   if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../client/build')));
@@ -32,8 +36,6 @@ const startApolloServer = async () => {
       res.sendFile(path.join(__dirname, '../client/build/index.html'));
     });
   }
-
-  app.use('/graphql', expressMiddleware(server));
 
   db.once('open', () => {
     app.listen(PORT, () => {
