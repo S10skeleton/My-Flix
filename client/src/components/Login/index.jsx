@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 import { useMutation } from "@apollo/client";
@@ -6,6 +7,7 @@ import Auth from "../../utils/auth";
 
 const LoginForm = () => {
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });
+
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
 
@@ -33,7 +35,9 @@ const LoginForm = () => {
       // Check if the login was successful and the token exists
       if (data.loginUser && data.loginUser.token) {
         Auth.login(data.loginUser.token);
+
         console.log("Logged in successfully!"); // Add this line for confirmation
+
       } else {
         // Handle case where login is unsuccessful
         throw new Error("Login failed");
@@ -49,6 +53,7 @@ const LoginForm = () => {
     // Redirect to the home page for the demo
     window.location.assign("/home");
   };
+
 
   return (
     <>
@@ -69,6 +74,7 @@ const LoginForm = () => {
               type="text"
               placeholder="Your email"
               name="email"
+
               onChange={handleInputChange}
               value={userFormData.email}
               required
@@ -84,6 +90,7 @@ const LoginForm = () => {
               type="password"
               placeholder="Your password"
               name="password"
+
               onChange={handleInputChange}
               value={userFormData.password}
               required
@@ -102,6 +109,7 @@ const LoginForm = () => {
 
           <Button onClick={handleViewDemo}>View Demo</Button>
         </Form>
+
       </div>
     </>
   );

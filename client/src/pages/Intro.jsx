@@ -1,25 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // import useHistory hook from react-router-dom
-import MFLogo from '../assets/MFLogo.webp';
-import IntroAudio from '../assets/BidenIntro.mp3'; // Import your audio file
-import LoginForm from '../components/Login';
-
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; 
+import MFLogo from "../assets/MFLogo.webp";
+import LoginForm from "../components/Login";
 
 const IntroPage = () => {
-  // const isLoggedIn = false; // Replace with actual login check
+
   const [showIntro, setShowIntro] = useState(true);
-  // const navigate = useNavigate(); // useHistory hook for navigation
+ 
 
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntro(false);
     }, 1000);
+
     return () => clearTimeout(timer);
   }, []);
-
-
-
+// intro video
   return (
     <>
       {showIntro && (
@@ -32,6 +29,7 @@ const IntroPage = () => {
           <LoginForm /> {/* Render LoginForm instead of a button */}
 
         </div>
+
     </>
   );
 };

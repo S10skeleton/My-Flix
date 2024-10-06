@@ -8,8 +8,9 @@ import MFLogo from '../../assets/MFLogo.webp'
 const Header = () => {
   return (
     <header className="header">
-      <img src={MFLogo} alt="MF Logo" className="header-logo" />
-      <h1>My Flix</h1>
+      <Link to="/">
+        <img src={MFLogo} alt="MF Logo" className="header-logo" />
+      </Link>      <h1>My Flix</h1>
       <p>Your Personal Video <br /> Streaming Platform</p>
     </header>
   );
