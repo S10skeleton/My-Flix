@@ -10,10 +10,11 @@ const IntroPage = () => {
   const [showIntro, setShowIntro] = useState(true);
   // const navigate = useNavigate(); // useHistory hook for navigation
 
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntro(false);
-    }, 4000);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -24,15 +25,12 @@ const IntroPage = () => {
       {showIntro && (
         <div className="fullscreen-intro">
           <img src={MFLogo} alt="Intro Logo" className="fullscreen-logo" />
-          <audio autoPlay>
-            <source src={IntroAudio} type="audio/mp3" />
-            Your browser does not support the audio element.
-          </audio>
         </div>
       )}
 
 <div className="intro-page">
           <LoginForm /> {/* Render LoginForm instead of a button */}
+
         </div>
     </>
   );
