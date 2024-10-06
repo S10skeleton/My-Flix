@@ -8,10 +8,12 @@ const IntroPage = () => {
   const [showIntro, setShowIntro] = useState(true);
  
 
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntro(false);
-    }, 2000);
+    }, 1000);
+
     return () => clearTimeout(timer);
   }, []);
 // intro video
@@ -23,9 +25,11 @@ const IntroPage = () => {
         </div>
       )}
 
-      <div className="intro-page">
-        <LoginForm />
-      </div>
+<div className="intro-page">
+          <LoginForm /> {/* Render LoginForm instead of a button */}
+
+        </div>
+
     </>
   );
 };
